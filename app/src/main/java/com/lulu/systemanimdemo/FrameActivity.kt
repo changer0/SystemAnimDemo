@@ -6,6 +6,9 @@ import android.os.Bundle
 import com.lulu.systemanimdemo.test.Utils
 import kotlinx.android.synthetic.main.activity_frame.*
 
+/**
+ * 帧动画
+ */
 class FrameActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

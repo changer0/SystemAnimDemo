@@ -13,5 +13,8 @@ class MainActivity : AppCompatActivity() {
         frameAnim.setOnClickListener {
             startActivity(Intent(this@MainActivity, FrameActivity::class.java))
         }
+        tweenAnim.setOnClickListener {
+            startActivity(Intent(this@MainActivity, TweenActivity::class.java))
+        }
     }
 }

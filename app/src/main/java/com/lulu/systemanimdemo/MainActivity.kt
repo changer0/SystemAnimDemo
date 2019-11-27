@@ -16,5 +16,8 @@ class MainActivity : AppCompatActivity() {
         tweenAnim.setOnClickListener {
             startActivity(Intent(this@MainActivity, TweenActivity::class.java))
         }
+        propertyAnim.setOnClickListener {
+            startActivity(Intent(this@MainActivity, PropertyActivity::class.java))
+        }
     }
 }

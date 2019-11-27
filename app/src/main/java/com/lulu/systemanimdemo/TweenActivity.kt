@@ -1,8 +1,5 @@
 package com.lulu.systemanimdemo
 
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
-import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -22,11 +19,11 @@ class TweenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tween)
         //加载 xml 动画资源
-        val anim = AnimationUtils.loadAnimation(this, R.anim.tween_anim)
+        val xmlAnim = AnimationUtils.loadAnimation(this, R.anim.tween_anim)
         //设置动画结束后保留结束状态
-        anim.fillAfter = true
+        xmlAnim.fillAfter = true
 
-// 组合动画设置
+        // 组合动画设置
         val setAnimation = AnimationSet(true)
 
         // 旋转动画
@@ -73,10 +70,8 @@ class TweenActivity : AppCompatActivity() {
         setAnimation.fillAfter = true
 
         start.setOnClickListener{
-            xmlAnimImg.startAnimation(anim)
+            xmlAnimImg.startAnimation(xmlAnim)
             codeAnimImg.startAnimation(setAnimation)
-
-
         }
 
         //设置监听
@@ -94,7 +89,6 @@ class TweenActivity : AppCompatActivity() {
             }
 
         })
-
     }
 
 }
